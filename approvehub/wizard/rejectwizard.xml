@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_reject_wizard_form" model="ir.ui.view">
+            <field name="name">reject.wizard.form</field>
+            <field name="model">reject.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="reason" required="1"/>
+                    </group>
+                    <footer>
+                            <button string="Submit" type="object" class="btn-primary" name="submit_action"/>
+                            <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_confirm_reject" model="ir.actions.act_window">
+            <field name="name">Reject wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reject.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_reject_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+            <!-- <menuitem name="reject wizard" 
+            id="reject_wizard_root"
+            parent="approval_root" 
+            sequence="67"
+            action="action_confirm_reject"/> -->
+
+            <!-- <menuitem name="reject wizard" 
+            id="action_reject_wizard_menu" 
+            parent="reject_wizard_root" 
+            sequence="80" 
+            action="action_confirm_reject"/> -->    
+
+
+
+    </data>
+</odoo>

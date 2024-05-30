@@ -1,0 +1,26 @@
+<!-- <odoo>
+    <data>
+        <record id="approval_email_template_id" model="mail.template">
+            <field name="name">Approval Email Template</field>
+            <field name="model_id" ref="model_approvehub_form"/>
+            <field name="subject">Approval Notification</field>
+            <field name="email_from">{{ (object.user_ids[0].email_formatted) }}</field>
+            <field name="email_to">${object.email}</field>
+            <field name="body_html" type="html">
+                <p>Hello<t t-out="object.email"/>,
+                </p>
+                <p>Your Request Successfully Sent to:</p>
+                <ul>
+                    <t t-foreach="object.user_ids" t-as="user">
+                        <li>
+                            <t t-out="user.name"/>
+                        </li>
+                    </t>
+                </ul>
+                <p>Your approval means a lot to us. We look forward to your positive response.</p>
+                <p>Best regards,<br/>Approval Hub
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo> -->

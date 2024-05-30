@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_approvehub_form_request_form" model="ir.ui.view">
+        <field name="name">approvehub.form.request.form</field>
+        <field name="model">approvehub.form.request</field>
+        <field name="arch" type="xml">
+            <form string="Approval Request">
+                <group>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="model_list"/>
+                    <field name="user_id"/>
+                    <field name="sale_order_id"/>
+                    <field name="status"/>
+                </group>
+                <footer>
+                    <button name="approve_request" string="Approve" type="object" class="btn-primary"/>
+                    <button name="reject_request" string="Reject" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_approvehub_form_request_tree" model="ir.ui.view">
+        <field name="name">approvehub.form.request.tree</field>
+        <field name="model">approvehub.form.request</field>
+        <field name="arch" type="xml">
+            <tree string="Approval Requests">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="model_list"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_approvehub_form_request_search" model="ir.ui.view">
+        <field name="name">approvehub.form.request.search</field>
+        <field name="model">approvehub.form.request</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="status"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_approvehub_form_request">
+        <field name="name">Approval Requests</field>
+        <field name="res_model">approvehub.form.request</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

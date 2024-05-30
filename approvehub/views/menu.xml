@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--  Menu Operations  -->
+        <menuitem id="approval_root"
+                  name="ApproveHub"
+                  sequence="10"/>
+
+        <menuitem id="approval_sub_menu"
+                  name="Approval Assign"
+                  parent="approval_root"
+                  action="action_approval_form_tree"
+                  sequence="1"/>
+
+<!--        <menuitem id="approval_request_menu"-->
+<!--                  name="Approval Requests"-->
+<!--                  parent="approval_root"-->
+<!--                  action="action_approvehub_form_request"-->
+<!--                  sequence="2"/>-->
+
+<!--        <menuitem id="approval_sub1_menu"-->
+<!--                  name="Approval Request"-->
+<!--                  parent="approval_root"-->
+<!--                  action="action_approval_request_form_tree"-->
+<!--                  sequence="2"/>-->
+    </data>
+</odoo>

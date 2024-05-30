@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_approvehub_form,access.approvehub.form,model_approvehub_form,base.group_user,1,1,1,1
+access_approvehub_form_user_line,access.approvehub.form.user.line,model_approvehub_form_user_line,base.group_user,1,1,1,1
+access_approvehub_user_line,access.approvehub.user.line,model_approvehub_user_line,base.group_user,1,1,1,1
+access_reject_wizard,reject.wizard,model_reject_wizard,base.group_user,1,1,1,1
